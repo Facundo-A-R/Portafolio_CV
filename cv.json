@@ -17,18 +17,18 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "midudev",
+        "username": "Facundo Aldo Rodríguez",
         "url": "https://linkedin.com/in/midudev"
       },
       {
-        "network": "X",
-        "username": "midudev",
-        "url": "https://x.com/midudev"
+        "network": "Sitio Web",
+        "username": "Facundo",
+        "url": "https://facundo-a-r.github.io/Mi-Portafolio/"
       },
       {
         "network": "GitHub",
-        "username": "midudev",
-        "url": "https://github.com/midudev"
+        "username": "Facundo-A-R",
+        "url": "https://github.com/Facundo-A-R"
       }
     ]
   },
@@ -66,124 +66,164 @@
       ]
     }
   ],
-  "volunteer": [{
-    "organization": "Organization",
-    "position": "Volunteer",
-    "url": "https://organization.com/",
-    "startDate": "2012-01-01",
-    "endDate": "2013-01-01",
-    "summary": "Description…",
-    "highlights": [
-      "Awarded 'Volunteer of the Month'"
-    ]
-  }],
-  "education": [{
-    "institution": "Universitat Oberta de Catalunya",
-    "url": "https://www.uoc.edu/portal/es/index.html",
-    "area": "Ingeniero de Software",
-    "studyType": "Bachelor",
-    "startDate": "2003-01-01",
-    "endDate": "2009-01-01",
-    "score": "4.0",
-    "courses": [
-      "DB1101 - Basic SQL"
-    ]
-  }],
-  "awards": [{
-    "title": "Award",
-    "date": "2014-11-01",
-    "awarder": "Company",
-    "summary": "There is no spoon."
-  }],
-  "certificates": [{
-    "name": "Certificate",
-    "date": "2021-11-07",
-    "issuer": "Company",
-    "url": "https://certificate.com"
-  }],
-  "publications": [{
-    "name": "Publication",
-    "publisher": "Company",
-    "releaseDate": "2014-10-01",
-    "url": "https://publication.com",
-    "summary": "Description…"
-  }],
+  "volunteer": [
+    {
+      "organization": "Organization",
+      "position": "Volunteer",
+      "url": "https://organization.com/",
+      "startDate": "2012-01-01",
+      "endDate": "2013-01-01",
+      "summary": "Description…",
+      "highlights": [
+        "Awarded 'Volunteer of the Month'"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Universitat Oberta de Catalunya",
+      "url": "https://www.uoc.edu/portal/es/index.html",
+      "area": "Ingeniero de Software",
+      "studyType": "Bachelor",
+      "startDate": "2003-01-01",
+      "endDate": "2009-01-01",
+      "score": "4.0",
+      "courses": [
+        "DB1101 - Basic SQL"
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "title": "Award",
+      "date": "2014-11-01",
+      "awarder": "Company",
+      "summary": "There is no spoon."
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Certificate",
+      "date": "2021-11-07",
+      "issuer": "Company",
+      "url": "https://certificate.com"
+    }
+  ],
+  "publications": [
+    {
+      "name": "Publication",
+      "publisher": "Company",
+      "releaseDate": "2014-10-01",
+      "url": "https://publication.com",
+      "summary": "Description…"
+    }
+  ],
   "skills": [
     {
       "name": "HTML",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend"
+        "Desarrollo Web",
+        "Frontend"
       ]
     },
     {
       "name": "CSS",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Diseño Responsive"
+        "Desarrollo Web",
+        "Frontend",
+        "Diseño Responsive"
       ]
     },
     {
       "name": "JavaScript",
       "level": "Master",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "Fullstack"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "Fullstack"
       ]
     },
     {
       "name": "Tailwind",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "CSS Framework", "Diseño Responsive"
+        "Desarrollo Web",
+        "Frontend",
+        "CSS Framework",
+        "Diseño Responsive"
       ]
     },
     {
       "name": "TypeScript",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "Backend", "JavaScript Superset"
+        "Desarrollo Web",
+        "Frontend",
+        "Backend",
+        "JavaScript Superset"
       ]
     },
     {
       "name": "Node",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Backend", "JavaScript", "Servidor"
+        "Desarrollo Web",
+        "Backend",
+        "JavaScript",
+        "Servidor"
       ]
     },
     {
       "name": "MySQL",
       "level": "Avanzado",
       "keywords": [
-        "Bases de Datos", "SQL", "Almacenamiento de Datos", "Backend"
+        "Bases de Datos",
+        "SQL",
+        "Almacenamiento de Datos",
+        "Backend"
       ]
     },
     {
       "name": "Git",
       "level": "Avanzado",
       "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente"
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente"
       ]
     },
     {
       "name": "GitHub",
       "level": "Avanzado",
       "keywords": [
-        "Control de Versiones", "Colaboración", "Código Fuente", "Git"
+        "Control de Versiones",
+        "Colaboración",
+        "Código Fuente",
+        "Git"
       ]
     },
     {
       "name": "Next.js",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "React Framework", "SSR", "Static Generation"
+        "Desarrollo Web",
+        "Frontend",
+        "React Framework",
+        "SSR",
+        "Static Generation"
       ]
     },
     {
       "name": "React",
       "level": "Avanzado",
       "keywords": [
-        "Desarrollo Web", "Frontend", "JavaScript Library", "UI"
+        "Desarrollo Web",
+        "Frontend",
+        "JavaScript Library",
+        "UI"
       ]
     }
   ],
@@ -197,17 +237,21 @@
       "fluency": "Advanced"
     }
   ],
-  "interests": [{
-    "name": "Wildlife",
-    "keywords": [
-      "Ferrets",
-      "Unicorns"
-    ]
-  }],
-  "references": [{
-    "name": "Jane Doe",
-    "reference": "Reference…"
-  }],
+  "interests": [
+    {
+      "name": "Wildlife",
+      "keywords": [
+        "Ferrets",
+        "Unicorns"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Jane Doe",
+      "reference": "Reference…"
+    }
+  ],
   "projects": [
     {
       "name": "mars.codes",
