@@ -17,18 +17,18 @@
     "profiles": [
       {
         "network": "LinkedIn",
-        "username": "Facundo Aldo Rodríguez",
+        "username": "Facundo-Aldo-Rodríguez",
         "url": "https://linkedin.com/in/midudev"
-      },
-      {
-        "network": "Sitio Web",
-        "username": "Facundo",
-        "url": "https://facundo-a-r.github.io/Mi-Portafolio/"
       },
       {
         "network": "GitHub",
         "username": "Facundo-A-R",
         "url": "https://github.com/Facundo-A-R"
+      },
+      {
+        "network": "X",
+        "username": "Facundo",
+        "url": "https://facundo-a-r.github.io/Mi-Portafolio/"
       }
     ]
   },

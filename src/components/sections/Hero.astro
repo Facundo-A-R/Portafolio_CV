@@ -1,23 +1,23 @@
 ---
-import { basics } from '@cv'
-import Section from  "@/components/Section.astro"
-import Mail from "@/icons/Mail.astro"
-import Phone from "@/icons/Phone.astro"
-import WorldMap from '@/icons/WorldMap.astro'
+import { basics } from "@cv";
+import Section from "@/components/Section.astro";
+import Mail from "@/icons/Mail.astro";
+import Phone from "@/icons/Phone.astro";
+import WorldMap from "@/icons/WorldMap.astro";
 
-import Linkedin from "@/icons/LinkedIn.astro"
-import GitHub from "@/icons/GitHub.astro"
-import HTML from "@/icons/html.astro"
+import type { SocialIcon } from "@/types";
+import Linkedin from "@/icons/LinkedIn.astro";
+import GitHub from "@/icons/GitHub.astro";
+import X from "@/icons/X.astro";
 
+const { name, label, image, location, profiles, email, phone } = basics;
+const { city, region } = location;
 
-const { name, label, image, location, profiles, email,  phone } = basics
-const { city, region } = location
-
-const SOCIAL_ICONS: Record<string, any> = {
+const SOCIAL_ICONS: SocialIcon = {
     Linkedin,
     GitHub,
-    HTML,
-}
+    X,
+};
 ---
 
 <Section>
@@ -26,43 +26,45 @@ const SOCIAL_ICONS: Record<string, any> = {
             <h1>{name}</h1>
             <h2>{label}</h2>
             <span>
-                <WorldMap>
+                <WorldMap />
                 {city}, {region}
             </span>
             <footer>
                 {
                     email && (
-                        <a 
-                        href={`mailto:${email}`}
-                        title="Enviar un correo electronico a ${name} al correo ${email}"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <Mail />
+                        <a
+                            href={`mailto:${email}`}
+                            title="Enviar un correo electronico a ${name} al correo ${email}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Mail />
                         </a>
                     )
                 }
                 {
                     phone && (
-                        <a 
-                        href={`tel:${phone}`}
-                        title="LLamar a ${name} al número ${phone}"
-                        target="_blank"
-                        rel="noopener noreferrer">
-                        <Phone />
+                        <a
+                            href={`tel:${phone}`}
+                            title="LLamar a ${name} al número ${phone}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <Phone />
                         </a>
                     )
                 }
                 {
-                    profiles.map(({ network, url, username }) => {
-                        const Icon =  SOCIAL_ICONS[network]
-
+                    profiles.map(({ network, username, url }) => {
+                        const Icon = SOCIAL_ICONS[network];
                         return (
-                            <a                            
+                            <a
                             href={url}
-                            title={`Visitar la cuenta de ${name} en ${network} `}
+                            title={`Ir a la cuenta de ${network} de ${name} @ ${username}`}
                             target="_blank"
-                            rel="noopener noreferrer">
-                            <Icon />
+                            rel="noopener noreferrer"
+                            >
+                                <Icon />
                             </a>
                         )
                     })
@@ -94,20 +96,20 @@ const SOCIAL_ICONS: Record<string, any> = {
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         color: #444;
         font-weight: 500;
         font-size: 1.1rem;
         text-wrap: balance;
     }
-    
+
     spam {
         display: flex;
         color: #666;
         align-items: center;
-        gap: .25rem;
-        font-size: .85rem;
+        gap: 0.25rem;
+        font-size: 0.85rem;
         letter-spacing: -0.05rem;
     }
 
@@ -122,12 +124,12 @@ const SOCIAL_ICONS: Record<string, any> = {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid #eee; 
+        border: 1px solid #eee;
         padding: 4px;
         height: 32px;
         width: 32px;
         border-radius: 6px;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
     }
 
     footer a:hover {
@@ -141,5 +143,4 @@ const SOCIAL_ICONS: Record<string, any> = {
         width: 128px;
         border-radius: 16px;
     }
-
 </style>
