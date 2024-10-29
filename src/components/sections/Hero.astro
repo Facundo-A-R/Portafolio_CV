@@ -6,18 +6,19 @@ import Phone from "@/icons/Phone.astro";
 import WorldMap from "@/icons/WorldMap.astro";
 
 import type { SocialIcon } from "@/types";
-import Linkedin from "@/icons/LinkedIn.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
 import GitHub from "@/icons/GitHub.astro";
-import X from "@/icons/X.astro";
+import SitioWeb from "@/icons/SitioWeb.astro";
+import type { RecordType } from "astro:schema";
+
 
 const { name, label, image, location, profiles, email, phone } = basics;
 const { city, region } = location;
 
-const SOCIAL_ICONS: SocialIcon = {
-    Linkedin,
-    GitHub,
-    X,
-};
+
+const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn,  GitHub, SitioWeb };
+
+
 ---
 
 <Section>
@@ -29,11 +30,11 @@ const SOCIAL_ICONS: SocialIcon = {
                 <WorldMap />
                 {city}, {region}
             </span>
-            <footer>
+            <footer title="footer">
                 {
                     email && (
                         <a
-                            href={`mailto:${email}`}
+                            href={`mailto:${Mail}`}
                             title="Enviar un correo electronico a ${name} al correo ${email}"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -45,7 +46,7 @@ const SOCIAL_ICONS: SocialIcon = {
                 {
                     phone && (
                         <a
-                            href={`tel:${phone}`}
+                            href={`tel:${Phone}`}
                             title="LLamar a ${name} al número ${phone}"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -56,17 +57,17 @@ const SOCIAL_ICONS: SocialIcon = {
                 }
                 {
                     profiles.map(({ network, username, url }) => {
-                        const Icon = SOCIAL_ICONS[network];
+                        const Icon = SOCIAL_ICONS[network];                        
                         return (
                             <a
-                            href={url}
-                            title={`Ir a la cuenta de ${network} de ${name} @ ${username}`}
-                            target="_blank"
-                            rel="noopener noreferrer"
+                                href={url}
+                                title={`Ir a la cuenta de ${network} de ${name} @ ${username}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <Icon />
                             </a>
-                        )
+                        );
                     })
                 }
             </footer>
@@ -104,7 +105,7 @@ const SOCIAL_ICONS: SocialIcon = {
         text-wrap: balance;
     }
 
-    spam {
+    span {
         display: flex;
         color: #666;
         align-items: center;
