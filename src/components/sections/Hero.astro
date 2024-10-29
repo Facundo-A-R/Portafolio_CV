@@ -1,6 +1,7 @@
 ---
 import { basics } from "@cv";
 import Section from "@/components/Section.astro";
+
 import Mail from "@/icons/Mail.astro";
 import Phone from "@/icons/Phone.astro";
 import WorldMap from "@/icons/WorldMap.astro";
@@ -15,10 +16,7 @@ import type { RecordType } from "astro:schema";
 const { name, label, image, location, profiles, email, phone } = basics;
 const { city, region } = location;
 
-
-const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn,  GitHub, SitioWeb };
-
-
+const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn, GitHub, SitioWeb };
 ---
 
 <Section>
@@ -30,7 +28,7 @@ const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn,  GitHub, SitioWeb };
                 <WorldMap />
                 {city}, {region}
             </span>
-            <footer title="footer">
+            <footer>
                 {
                     email && (
                         <a
@@ -57,7 +55,7 @@ const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn,  GitHub, SitioWeb };
                 }
                 {
                     profiles.map(({ network, username, url }) => {
-                        const Icon = SOCIAL_ICONS[network];                        
+                        const Icon = SOCIAL_ICONS[network];
                         return (
                             <a
                                 href={url}
@@ -144,4 +142,31 @@ const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn,  GitHub, SitioWeb };
         width: 128px;
         border-radius: 16px;
     }
+
+    /* @media (width <= 700px) {
+        .container {
+            flex-direction: column-reverse;
+        }
+
+        .info {
+            justify-content: center;
+            align-items: center;
+            padding-right: 0;
+            text-align: center;
+        }
+
+        figure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2 {
+            text-wrap: balance;
+        }
+
+        figure {
+            margin: 0 auto;
+        }
+  } */
 </style>

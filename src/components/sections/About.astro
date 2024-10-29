@@ -1,8 +1,17 @@
 ---
+import { basics } from "@cv";
 import Section from "@/components/Section.astro";
+
+const { summary } = basics;
 ---
 
 <Section title="About">
-    <h2>Hola mundo</h2>
+    <p>{summary}</p>
 
 </Section>
+
+<style>
+    p {
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
