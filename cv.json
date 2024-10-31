@@ -6,9 +6,9 @@
     "email": "facundo.aldo.rodriguez@gmail.com",
     "phone": "+54 9 11 5051-4817",
     "url": "https://facundo-a-r.github.io/Mi-Portafolio/",
-    "summary": "Soy desarrollador Back-End autodidacta, me gusta mucho aprender y amo la informatica",
+    "summary": "Soy desarrollador web autodidacta, me gusta el Back-End y me gusta aprender cosas nuevas cada día",
     "location": {
-      "address": "Felipe Lavallol 450",
+      "address": "Lavallol 450",
       "postalCode": "1824",
       "city": "Buenos Aires,  Lanús",
       "countryCode": "AR",
@@ -118,10 +118,62 @@
       "summary": "Description…"
     }
   ],
-  "skills": [
+  "softskill": [ 
+    {
+      "name": "Comunicación",
+      "level": "Intermedio",
+      "description": "Buen manejo de presentaciones y conversaciones."
+    },
+    {
+      "name": "Trabajo en equipo",
+      "level": "Intermedio",
+      "description": "Contribuye activamente a proyectos de grupo."
+    },
+    {
+      "name": "Adaptabilidad",
+      "level": "Avanzado",
+      "description": "Prosperar en entornos cambiantes y liderar transformaciones."
+    },
+    {
+      "name": "Resolución de problemas",
+      "level": "Intermedio",
+      "description": "Analiza situaciones complejas y sugiere estrategias efectivas."
+    },
+    {
+      "name": "Creatividad",
+      "level": "Intermedio",
+      "description": "Aplica enfoques creativos en proyectos."
+    },
+    {
+      "name": "Liderazgo",
+      "level": "Básico",
+      "description": "Toma la iniciativa en pequeñas tareas."
+    },
+    {
+      "name": "Empatía",
+      "level": "Avanzado",
+      "description": "Muestra una profunda comprensión y apoyo emocional constante."
+    },
+    {
+      "name": "Manejo del tiempo",
+      "level": "Intermedio",
+      "description": "Prioriza y organiza tareas de manera efectiva."
+    },
+    {
+      "name": "Confianza en uno mismo",
+      "level": "Avanzado",
+      "description": "Inspira confianza en otros a través de su seguridad y actitud positiva."
+    },
+    {
+      "name": "Ética laboral",
+      "level": "Intermedio",
+      "description": "Muestra dedicación y compromiso en el trabajo."
+    }
+  ],
+  "hardskill": [   
     {
       "name": "HTML",
-      "level": "Master",
+      "level": "Intermedio",
       "keywords": [
         "Desarrollo Web",
         "Frontend"
@@ -129,7 +181,7 @@
     },
     {
       "name": "CSS",
-      "level": "Master",
+      "level": "Básico",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -138,7 +190,7 @@
     },
     {
       "name": "JavaScript",
-      "level": "Master",
+      "level": "Intermedio",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
@@ -147,38 +199,55 @@
       ]
     },
     {
-      "name": "Tailwind",
-      "level": "Avanzado",
+      "name": "Java",
+      "level": "Intermedio",
       "keywords": [
         "Desarrollo Web",
-        "Frontend",
-        "CSS Framework",
-        "Diseño Responsive"
+        "Backend"    
       ]
     },
     {
-      "name": "TypeScript",
-      "level": "Avanzado",
+      "name": "Python",
+      "level": "Intermedio",
+      "keywords": [
+        "Desarrollo Web",
+        "Backend"
+      ]
+    },
+    {
+      "name": "Django",
+      "level": "Intermedio",
       "keywords": [
         "Desarrollo Web",
         "Frontend",
         "Backend",
-        "JavaScript Superset"
+        "Framework",
+        "Servidor"
       ]
     },
     {
-      "name": "Node",
-      "level": "Avanzado",
+      "name": "Bootstrap",
+      "level": "Intermedio",
       "keywords": [
         "Desarrollo Web",
+        "Frontend",
+        "Framework"
+      ]
+    },
+    {
+      "name": "Astro",
+      "level": "Intermedio",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend",
         "Backend",
-        "JavaScript",
+        "Framework",
         "Servidor"
       ]
     },
     {
       "name": "MySQL",
-      "level": "Avanzado",
+      "level": "Intermedio",
       "keywords": [
         "Bases de Datos",
         "SQL",
@@ -188,7 +257,7 @@
     },
     {
       "name": "Git",
-      "level": "Avanzado",
+      "level": "Intermedio",
       "keywords": [
         "Control de Versiones",
         "Colaboración",
@@ -197,33 +266,12 @@
     },
     {
       "name": "GitHub",
-      "level": "Avanzado",
+      "level": "Intermedio",
       "keywords": [
         "Control de Versiones",
         "Colaboración",
         "Código Fuente",
         "Git"
-      ]
-    },
-    {
-      "name": "Next.js",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "React Framework",
-        "SSR",
-        "Static Generation"
-      ]
-    },
-    {
-      "name": "React",
-      "level": "Avanzado",
-      "keywords": [
-        "Desarrollo Web",
-        "Frontend",
-        "JavaScript Library",
-        "UI"
       ]
     }
   ],
@@ -234,7 +282,7 @@
     },
     {
       "language": "English",
-      "fluency": "Advanced"
+      "fluency": "A2"
     }
   ],
   "interests": [

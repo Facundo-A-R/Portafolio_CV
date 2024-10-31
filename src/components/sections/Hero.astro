@@ -6,7 +6,7 @@ import Mail from "@/icons/Mail.astro";
 import Phone from "@/icons/Phone.astro";
 import WorldMap from "@/icons/WorldMap.astro";
 
-import type { SocialIcon } from "@/types";
+//import type { SocialIcon } from "@/types";
 import LinkedIn from "@/icons/LinkedIn.astro";
 import GitHub from "@/icons/GitHub.astro";
 import SitioWeb from "@/icons/SitioWeb.astro";
@@ -14,7 +14,7 @@ import type { RecordType } from "astro:schema";
 
 
 const { name, label, image, location, profiles, email, phone } = basics;
-const { city, region } = location;
+const { city, region, address } = location;
 
 const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn, GitHub, SitioWeb };
 ---
@@ -26,7 +26,7 @@ const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn, GitHub, SitioWeb };
             <h2>{label}</h2>
             <span>
                 <WorldMap />
-                {city}, {region}
+                {city}, {address}, {region}
             </span>
             <footer>
                 {
@@ -114,6 +114,8 @@ const SOCIAL_ICONS: RecordType<string, any> = { LinkedIn, GitHub, SitioWeb };
 
     footer {
         display: flex;
+        color: #555;
+        font-size: 0.65rem;
         gap: 4px;
         margin-top: 8px;
     }

@@ -1,7 +1,66 @@
 ---
 import Section from "../Section.astro";
+import { hardskill, softskill } from "@cv";
 ---
 
 <Section title="Skills">
-
+    <article>
+        <header>
+            <h4>SOFT SKILLS</h4>
+        </header>
+        <footer>
+            <ul>
+                {
+                    softskill.map(({ name }) => (
+                        <li>
+                            <span>{name}</span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </footer>
+    </article>
+    <article>
+        <header>
+            <h4>HARD SKILLS</h4>
+        </header>
+        <footer>
+            <ul>
+                {
+                    hardskill.map(({ name }) => (
+                        <li>
+                            <span>{name}</span>
+                        </li>
+                    ))
+                }
+            </ul>
+        </footer>
+    </article>
 </Section>
+
+<style>
+    article {
+        margin-bottom: 20px;
+    }
+
+    article h4 {
+        font-weight: 400;
+        color: #222;
+        margin-bottom: 0.8rem;
+    }
+
+    ul {
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    li {
+        border-radius: 6px;
+        background: #eee;
+        color: black;
+        font-size: 0.8rem;
+        font-weight: 500;
+        padding: 0.2rem 0.6rem;
+    }
+</style>
