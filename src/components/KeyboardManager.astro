@@ -1,11 +1,106 @@
-<footer>
+---
+import { basics } from "@cv";
 
+import type { RecordType } from "astro:schema";
+import GitHub from "@/icons/GitHub.astro";
+import LinkedIn from "@/icons/LinkedIn.astro";
+import SitioWeb from "@/icons/SitioWeb.astro";
+
+const { profiles } = basics;
+
+const SOCIAL_ICONS: RecordType<string, any> = { 
+  LinkedIn: LinkedIn,
+  GitHub: GitHub, 
+  SitioWeb: SitioWeb
+ };
+
+const profilesInfo = profiles.map(({ network, url }) => {
+  const Icon = SOCIAL_ICONS[network];
+  const firstLetter = network[0].toUpperCase();
+
+  return {
+    id: network,
+    title:'Ingresa ha ' + network,
+    url,
+    hotkey: `ctrl + ${firstLetter}`,
+    icon: Icon,
+    section: "Social",
+  };
+});
+
+---
+
+<footer class="no-print">
+  Pulsa <kbd>ctrl</kbd> + <kbd>K</kbd> para abrir el panel de comandos
 </footer>
 
-<style>
-
-</style>
+<ninja-keys
+  data-info={JSON.stringify(profilesInfo)}
+  placeholder="Buscar Comando"
+  hiddenBreadcrumbs
+>
+</ninja-keys>
 
 <script>
+  
+  import "ninja-keys";
+
+  const ninja = document.querySelector("ninja-keys");
+  if (ninja != null) {
+    const info = ninja?.getAttribute("data-info") ?? "";
+    const profilesInfo = JSON.parse(info);
+    const data = profilesInfo.map((item: any) => {
+      return {
+        ...item,
+        
+        handler: () => {
+          // it's auto register above hotkey with this handler
+          window.open(item.url, "_blank");
+        },
+      };
+    });
+
     
+
+    ninja.data = [
+      {
+        id: "print",
+        title: "  -Imprimir-",
+        hotkey: "ctrl+P",
+        icon: "\u{1F5A8}\uFE0F",
+        section: "Acciones",
+        handler: () => {
+          // it's auto register above hotkey with this handler
+          window.print();
+        },
+      },
+      ...data,
+    ];
+  }
 </script>
+
+<style>
+  footer {
+    background-color: #fdfdfd;
+    border-top: 1px solid #eee;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-block: 8px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  kbd {
+    background: #eee;
+    border-radius: 4px;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
+
+  @media print {
+    ninja-keys {
+      display: none !important;
+    }
+  }
+</style>
